@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Book.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-MediumOblique.ttf");
+  font-style: italic;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Heavy.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.my-gradient {
+  background: linear-gradient(#9a7def, #7b5fce);
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.disable-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-limit {
+    height: 50vh;
+  }
+}
+
