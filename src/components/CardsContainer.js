@@ -18,43 +18,43 @@ class CardsContainer extends Component {
     this.images = [
       {
         id: 7,
-        src: "/images/project7.jpg",
-        link: "https://thirsty-kare-c23c80.netlify.app/",
+        src: "/images/HP1.jpg",
+        link: "https://hamzaable.github.io/FoodOrders/",
       },
       {
         id: 8,
-        src: "/images/project8.jpg",
-        link: "https://relaxed-murdock-fccc85.netlify.app/",
+        src: "/images/HP2.jpg",
+        link: "https://hamzaable.github.io/Expenses-Tracker/",
       },
       {
         id: 1,
-        src: "/images/project6.jpg",
-        link: "https://hamidraza1.github.io/Awards/",
+        src: "/images/HP3.jpg",
+        link: "https://hamzaable.github.io/ChatsBoard/",
       },
       {
         id: 2,
-        src: "/images/project1.jpg",
-        link: "https://hamidraza1.github.io/",
+        src: "/images/HP4.jpg",
+        link: "https://hamzaable.github.io/Job-Listing/",
       },
       {
         id: 3,
-        src: "/images/project2.jpg",
-        link: "https://hamidraza1.github.io/Shield/",
+        src: "/images/HP5.jpg",
+        link: "https://hamzaable.github.io/Portfolio-CSS/",
       },
       {
         id: 4,
-        src: "/images/project3.jpg",
-        link: "https://hamidraza1.github.io/MindmapNew/",
+        src: "/images/HP6.jpg",
+        link: "https://github.com/hamzaable/Modelling-of-Solar-Roof-Tiles",
       },
       {
         id: 5,
-        src: "/images/project4.jpg",
-        link: "https://hamidraza1.github.io/job-listing-app/",
+        src: "/images/HP7.jpg",
+        link: "https://hamzaable.github.io/React-Login/",
       },
       {
         id: 6,
-        src: "/images/project5.jpg",
-        link: "https://hamidraza1.github.io/chatdashboard/",
+        src: "/images/HP8.jpg",
+        link: "#",
       },
     ];
   }
@@ -99,7 +99,7 @@ class CardsContainer extends Component {
               <div
                 className="p-1 bg-white rounded-lg shadow-md 
                 flex-shrink-0 
-                w-48 mx-2 mb-2 md:w-40 lg:w-40 xl:w-48"
+                w-48 mx-2 mb-2 md:w-40 lg:w-40 xl:w-58"
                 key={image.id}
                 ref={this.inner}
               >
