@@ -99,7 +99,7 @@ class CardsContainer extends Component {
               <div
                 className="p-1 bg-white rounded-lg shadow-md 
                 flex-shrink-0 
-                w-48 mx-2 mb-2 md:w-40 lg:w-40 xl:w-58"
+                w-48 mx-2 mb-2 md:w-52 lg:w-52 xl:w-64"
                 key={image.id}
                 ref={this.inner}
               >

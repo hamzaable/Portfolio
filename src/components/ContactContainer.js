@@ -12,14 +12,14 @@ const contactContainer = (props) => {
 			<h2 className="text-2xl font-medium text-mygray md:text-lg">
 				Willing to hire?
 			</h2>
-            <div className="flex ">
-			<button className="my-gradient w-full py-2 rounded-lg text-3xl text-white font-bold mt-2 md:text-base md:py-1 "
+            <div className="flex">
+			<button className="my-gradient w-full py-2 rounded-lg text-2xl md:text-3xl text-white font-bold mt-2 md:text-base md:py-1 "
             onClick={cvClickHandler}
             >
 				Resume
 			</button>
 			<button 
-            className="my-gradient w-full py-2 rounded-lg text-3xl text-white font-bold mt-2 md:text-base md:py-1 md:ml-2"
+            className=" my-gradient w-full py-2 rounded-lg text-2xl md:text-3xl text-white font-bold mt-2 md:text-base md:py-1 ml-2"
             onClick={onClickHandler}>
             	Contact me
 			</button>
