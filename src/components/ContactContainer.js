@@ -5,7 +5,7 @@ const contactContainer = (props) => {
         window.location.href = "mailto:hamzarsaleemi@gmail.com?subject= Hamza's Portfolio- Email Subject&body=";
     }
     const cvClickHandler = ()=>{
-        window.location.href="http://hamzarsaleemi.com/HamzaCV.pdf"
+        window.location.href="https://raw.githubusercontent.com/hamzaable/Portfolio/f202e91129a714ef248c184b0ded4e9185042376/HamzaCV.pdf"
     }
 	return (
 		<div className="px-5 mx-auto max-w-lg md:w-1/4 md:self-end md:mb-4">

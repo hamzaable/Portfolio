@@ -36,7 +36,7 @@ const Footer = (props) => {
 
                     {/* Fiverr */}
 					<a
-						href="https://fiverr.com/hamzaable"
+						href="https://www.fiverr.com/hamzaawww"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
