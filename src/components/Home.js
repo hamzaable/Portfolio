@@ -11,7 +11,7 @@ const Home = (props) => {
       <div className="md:flex md:pl-8">
         <div className="md:w-2/5 ">
           <img
-            src={process.env.PUBLIC_URL + "/images/Profile.jpg"}
+            src={process.env.PUBLIC_URL + "/images/profile.jpg"}
             alt="profile"
             className="rounded-lg shadow-sm w-32  "
           />
