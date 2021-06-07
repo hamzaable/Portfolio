@@ -1,5 +1,5 @@
 export default function ProjectsList() {
-/* 	const projectsList = [
+	const projectsList = [
 		{
 			id: 7,
 			src: "/images/HP1.jpg",
@@ -33,77 +33,77 @@ export default function ProjectsList() {
 			src: "/images/HP5.jpg",
 			link: "https://hamzaable.github.io/Portfolio-CSS/",
             projectName:"Portfolio",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+            techStack:["Javascript","Tailwind","HTML","Bootstrap", "CSS"]
 		},
 		{
 			id: 4,
 			src: "/images/HP6.jpg",
 			link: "https://github.com/hamzaable/Modelling-of-Solar-Roof-Tiles",
             projectName:"Python",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+            techStack:["Python", "Tespy", "panda", "PVLib"]
 		},
 		{
 			id: 5,
 			src: "/images/HP7.jpg",
 			link: "https://hamzaable.github.io/React-Login/",
             projectName:"React Login",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+            techStack:["React","Javascript","Tailwind","HTML","Context","Mysql", "CSS"]
 		},
 		{
 			id: 6,
 			src: "/images/HP8.jpg",
 			link: "#",
             projectName:"Database",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-	]; */
-
-    const projectsList = [
-		{
-			id: 7,
-			src: "/images/HP1.jpg",
-			link: "https://hamzaable.github.io/FoodOrders/",
-            projectName:"Food Orders",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-		{
-			id: 8,
-			src: "/images/HP2.jpg",
-			link: "https://hamzaable.github.io/Expenses-Tracker/",
-            projectName:"Expenses Tracker",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-
-
-		{
-			id: 3,
-			src: "/images/HP5.jpg",
-			link: "https://hamzaable.github.io/Portfolio-CSS/",
-            projectName:"Portfolio",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-		{
-			id: 4,
-			src: "/images/HP6.jpg",
-			link: "https://github.com/hamzaable/Modelling-of-Solar-Roof-Tiles",
-            projectName:"Python",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-		{
-			id: 5,
-			src: "/images/HP7.jpg",
-			link: "https://hamzaable.github.io/React-Login/",
-            projectName:"React Login",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
-		},
-		{
-			id: 6,
-			src: "/images/HP8.jpg",
-			link: "#",
-            projectName:"Database",
-            techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+            techStack:["MS Access Database"]
 		},
 	];
+
+    // const projectsList = [
+	// 	{
+	// 		id: 7,
+	// 		src: "/images/HP1.jpg",
+	// 		link: "https://hamzaable.github.io/FoodOrders/",
+    //         projectName:"Food Orders",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+	// 	{
+	// 		id: 8,
+	// 		src: "/images/HP2.jpg",
+	// 		link: "https://hamzaable.github.io/Expenses-Tracker/",
+    //         projectName:"Expenses Tracker",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+
+
+	// 	{
+	// 		id: 3,
+	// 		src: "/images/HP5.jpg",
+	// 		link: "https://hamzaable.github.io/Portfolio-CSS/",
+    //         projectName:"Portfolio",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		src: "/images/HP6.jpg",
+	// 		link: "https://github.com/hamzaable/Modelling-of-Solar-Roof-Tiles",
+    //         projectName:"Python",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+	// 	{
+	// 		id: 5,
+	// 		src: "/images/HP7.jpg",
+	// 		link: "https://hamzaable.github.io/React-Login/",
+    //         projectName:"React Login",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+	// 	{
+	// 		id: 6,
+	// 		src: "/images/HP8.jpg",
+	// 		link: "#",
+    //         projectName:"Database",
+    //         techStack:["React","Javascript","Tailwind","HTML","Router","Firebase","Bootstrap", "CSS"]
+	// 	},
+	// ];
 	return (
 		{projectsList}
 	);

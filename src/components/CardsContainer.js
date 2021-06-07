@@ -75,13 +75,14 @@ const CardsContainer = (props) => {
 				{ProjectsArray.map((project) => {
 					return (
 						<div
-							className="p-1 bg-white rounded-lg shadow-md flex-shrink-0 w-48 mx-2 mb-2 md:w-52 lg:w-52 xl:w-56"
+							className="p-1 bg-white rounded-lg shadow-md flex-shrink-0 w-48 mx-2 mb-2 md:w-52 lg:w-52 xl:w-56 cursor-pointer"
 							key={project.id}
 							ref={inner}
 							onClick={modalHandler}
 							id={project.id}
 							data={project.id}
                             onClick={(e) => test(project.id,e)}
+                            
 						>
 							<div className="relative pb-3/4 ">
 								<div className="flex flex-col">
