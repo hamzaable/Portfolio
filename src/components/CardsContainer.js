@@ -26,7 +26,7 @@ const CardsContainer = (props) => {
 			Math.floor(outerWidth / (width + 16))
 		); /* 16 rem width of card */
 		window.addEventListener("resize", adjustSize);
-	}, [inner, outer]);
+	}, [inner, outer, outerWidth, width]);
 
 	const rightScrollHandler = () => {
 		if (position < ProjectsArray.length - numberOfVisibleCards) {
@@ -48,7 +48,7 @@ const CardsContainer = (props) => {
 		setshowModal(false);
 	};
 
-    const test = (id, event) =>{
+    const openModal = (id) =>{
         setSelectedProject(id)
         setshowModal(true);
     }
@@ -80,8 +80,7 @@ const CardsContainer = (props) => {
 							ref={inner}
 							onClick={modalHandler}
 							id={project.id}
-							data={project.id}
-                            onClick={(e) => test(project.id,e)}
+                            onClick={() => openModal(project.id)}
                             
 						>
 							<div className="relative pb-3/4 ">
