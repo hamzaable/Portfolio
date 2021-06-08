@@ -47,11 +47,11 @@ const CardsContainer = (props) => {
 			.querySelector("#project-" + id)
 			.getBoundingClientRect();
 		if (props.isweb === true) {
-			setOpenX(rect.left + window.scrollX - 200);
-			setOpenY(rect.top + window.scrollY - 200);
+			setOpenX(rect.left  - 200);
+			setOpenY(rect.top  - 200);
 		} else {
-			setOpenX(rect.left + window.scrollX - 100);
-			setOpenY(rect.top + window.scrollY - 100);
+			setOpenX(rect.left  - 100);
+			setOpenY(rect.top  - 100);
 		}
 		setSelectedProject(id);
 
@@ -119,11 +119,11 @@ const CardsContainer = (props) => {
 			.querySelector("#project-" + id)
 			.getBoundingClientRect();
 		if (props.isweb === true) {
-			setOpenX(rect.left + window.scrollX - 200);
-			setOpenY(rect.top + window.scrollY - 200);
+			setOpenX(rect.left - 200);
+			setOpenY(rect.top - 200);
 		} else {
-			setOpenX(rect.left + window.scrollX - 100);
-			setOpenY(rect.top + window.scrollY - 100);
+			setOpenX(rect.left  - 100);
+			setOpenY(rect.top - 100);
 		}
 		setSelectedProject(id);
 		setshowModal(true);
