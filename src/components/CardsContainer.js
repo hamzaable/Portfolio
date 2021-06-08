@@ -75,7 +75,7 @@ const CardsContainer = (props) => {
 
 					},
 				],
-				410
+				300
 			);
 			modal.style.transform = modal.style.transform.replace(
 				/scale\([0-9|\.]*\)/,
@@ -107,11 +107,11 @@ const CardsContainer = (props) => {
 					left: openX + "px",
 				},
 			],
-			410
+			340
 		);
 		setTimeout(function () {
 			setshowModal(false);
-		}, 400);
+		}, 330);
 	};
 
 	const openModal = (e, id) => {
