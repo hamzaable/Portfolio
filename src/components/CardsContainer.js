@@ -5,7 +5,6 @@ import { AiOutlineLeftCircle } from "react-icons/ai";
 import { AiOutlineRightCircle } from "react-icons/ai";
 import ProjectDetailsModal from "./ProjectDetailsModal";
 
-
 const CardsContainer = (props) => {
 	const ProjectsArray = Object.values(ProjectsList())[0];
 	const inner = React.createRef();
@@ -17,7 +16,10 @@ const CardsContainer = (props) => {
 	const [outerWidth, setouterWidth] = useState(null);
 
 	const [showModal, setshowModal] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(-1)
+	const [selectedProject, setSelectedProject] = useState(-1);
+
+	const [openX, setOpenX] = useState(0);
+	const [openY, setOpenY] = useState(0);
 
 	const adjustSize = useEffect(() => {
 		setwidth(inner.current.clientWidth);
@@ -40,18 +42,92 @@ const CardsContainer = (props) => {
 		}
 	};
 
-	const modalHandler = () => {
+	const modalHandler = (e, id) => {
+		const rect = document
+			.querySelector("#project-" + id)
+			.getBoundingClientRect();
+		if (props.isweb === true) {
+			setOpenX(rect.left + window.scrollX - 200);
+			setOpenY(rect.top + window.scrollY - 200);
+		} else {
+			setOpenX(rect.left + window.scrollX - 100);
+			setOpenY(rect.top + window.scrollY - 100);
+		}
+		setSelectedProject(id);
+
 		setshowModal(true);
 	};
 
+	useEffect(() => {
+		if (showModal === true) {
+			const modal = document.getElementById("Modal");
+			modal.animate(
+				[
+					{
+						// from
+						transform: " scale(0.35)",
+						top: openY + "px",
+						left: openX + "px",
+					},
+					{
+						// to
+						transform: "scale(1)",
+
+					},
+				],
+				410
+			);
+			modal.style.transform = modal.style.transform.replace(
+				/scale\([0-9|\.]*\)/,
+				"scale(" + 1 + ")"
+			);
+            modal.style.top="8vh";
+            modal.style.scale="1"
+		}
+	}, [showModal]);
+
+	/* All this sh*t just to add animation to modal on Close */
 	const closeHandler = () => {
-		setshowModal(false);
+		const backdrop = document.getElementById("Backdrop");
+		const modal = document.getElementById("Modal");
+        backdrop.style.display="none"
+		
+		modal.animate(
+			[
+				{
+					// from
+					opacity: 1,
+					transform: " scale(1)",
+				},
+				{
+					// to
+					opacity: 1,
+					transform: "scale(0.30)",
+					top: openY + "px",
+					left: openX + "px",
+				},
+			],
+			410
+		);
+		setTimeout(function () {
+			setshowModal(false);
+		}, 400);
 	};
 
-    const openModal = (id) =>{
-        setSelectedProject(id)
-        setshowModal(true);
-    }
+	const openModal = (e, id) => {
+		const rect = document
+			.querySelector("#project-" + id)
+			.getBoundingClientRect();
+		if (props.isweb === true) {
+			setOpenX(rect.left + window.scrollX - 200);
+			setOpenY(rect.top + window.scrollY - 200);
+		} else {
+			setOpenX(rect.left + window.scrollX - 100);
+			setOpenY(rect.top + window.scrollY - 100);
+		}
+		setSelectedProject(id);
+		setshowModal(true);
+	};
 
 	return (
 		<div className="">
@@ -69,48 +145,35 @@ const CardsContainer = (props) => {
 						project={selectedProject}
 						handleClose={closeHandler}
 						onBackClose={closeHandler}
+						id="Modal"
 					/>
 				)}
-
 				{ProjectsArray.map((project) => {
 					return (
 						<div
 							className="p-1 bg-white rounded-lg shadow-md flex-shrink-0 w-48 mx-2 mb-2 md:w-52 lg:w-52 xl:w-56 cursor-pointer"
 							key={project.id}
 							ref={inner}
-							onClick={modalHandler}
-							id={project.id}
-                            onClick={() => openModal(project.id)}
-                            
+							onClick={(e) => modalHandler(e, project.id)}
+							id={"project-" + project.id}
+							onClick={(e) => openModal(e, project.id)}
 						>
 							<div className="relative pb-3/4 ">
 								<div className="flex flex-col">
 									<div>
-										{/* <a
-											href={project.link}
-											target="_blank"
-											rel="noopener noreferrer"
-										> */}
-											<img
-												src={
-													process.env.PUBLIC_URL +
-													project.src
-												}
-												alt="project1"
-												className="rounded h-full object-fit absolute"
-											/>
-										{/* </a> */}
+										<img
+											src={
+												process.env.PUBLIC_URL +
+												project.src
+											}
+											alt="project1"
+											className="rounded h-full object-fit absolute"
+										/>
 									</div>
 								</div>
 							</div>
 							<div className=" hover:text-darkPurple text-center  pt-1 text-gray-600 text-sm font-medium ">
-								{/* 				<a
-									href={project.link}
-									target="_blank"
-									rel="noopener noreferrer"
-								> */}
 								<p>{project.projectName}</p>
-								{/* </a> */}
 							</div>
 						</div>
 					);

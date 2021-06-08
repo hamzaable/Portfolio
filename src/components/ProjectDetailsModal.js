@@ -17,15 +17,16 @@ const ProjectDetailsModal = (props) => {
 
 	return (
 		<Fragment>
-			<Modal onBackClose={props.onBackClose}>
+			<Modal
+				onBackClose={props.onBackClose}>
 				<div>
 					<div className="flex justify-between mb-1 pb-1 items-center ">
 						<div className="border-b-2 border-darkPurple">
 							<a
 								href={[selectedProject[0].link]}
 								className="flex items-center "
-                                target="_blank"
-                                rel="noopener noreferrer"
+								target="_blank"
+								rel="noopener noreferrer"
 							>
 								<h1 className="text-darkPurple text-xl md:text-2xl font-bold  ">
 									{[selectedProject[0].projectName]}
@@ -46,8 +47,8 @@ const ProjectDetailsModal = (props) => {
 					<a
 						href={[selectedProject[0].link]}
 						className="flex items-center "
-                        target="_blank"
-                        rel="noopener noreferrer"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<img
 							src={

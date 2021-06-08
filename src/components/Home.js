@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardsContainer from "./CardsContainer";
 import { motion } from "framer-motion";
 import Layout from "./Layout";
 
 const Home = (props) => {
-    
-   
+	
+	const [mobile, setmobile] = useState(false);
+
+
+	const mql = window.matchMedia("(min-width: 768px)");
+	const mobileView = mql.matches;
+
+	useEffect(() => {
+		if (mobileView) {
+			setmobile(true);
+		} else {
+			setmobile(false);
+		}
+	}, [mobileView]);
+
+	mql.addEventListener("change", (e) => {
+		let webview = e.matches;
+		if (webview) {
+			setmobile(true);
+		} else {
+			setmobile(false);
+		}
+	});
+
 	return (
 		<Layout>
-             
 			<div className="md:flex md:pl-8">
 				<div className="md:w-2/5 ">
 					<img
@@ -17,10 +38,13 @@ const Home = (props) => {
 						className="rounded-lg shadow-sm w-32  "
 					/>
 				</div>
-				<div className="hidden md:block md:w-3/5 relative">
-					<CardsContainer />
-				</div>
+				{mobile && (
+					<div className=" md:block md:w-3/5 relative">
+						<CardsContainer isweb={mobile} />
+					</div>
+				)}
 			</div>
+
 			<div className="md:w-3/5 md:pl-8">
 				<motion.h1
 					className="text-3xl font-bold text-mygray md:text-2xl lg:text-3xl"
@@ -33,7 +57,7 @@ const Home = (props) => {
 						Hamza Rehman Saleemi
 					</span>
 				</motion.h1>
-				
+
 				<motion.h1
 					className="text-3xl font-bold text-mygray md:text-2xl lg:text-3xl"
 					initial={{ marginLeft: "-20px", opacity: 0 }}
@@ -60,7 +84,7 @@ const Home = (props) => {
 				</motion.p>
 			</div>
 			<div className="-ml-2 md:hidden">
-				<CardsContainer />
+				<CardsContainer ismobile={mobile} />
 			</div>
 		</Layout>
 	);

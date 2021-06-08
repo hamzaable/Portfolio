@@ -10,15 +10,16 @@
   
   .modal {
     position: fixed;
-    top: 8vh;
-    left: 12%;
+/* top: 8vh; */
+    left: 12%;  
     width: 76%;
     background-color: white;
     padding: 1rem;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
-    animation: slide-down 300ms ease-out forwards;
+    /* transform: scale(1); */
+        /* animation: slide-down 100ms cubic-bezier(1,.28,.83,.67) ; */
   }
   
   @media (min-width: 768px) {
@@ -28,13 +29,11 @@
     }
   }
   
-  @keyframes slide-down {
+/*   @keyframes slide-down {
     from {
-      opacity: 0;
-      transform: translateY(-3rem);
-    }
+      /* transform: scale(0.35); */
+/*     }
     to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+      transform:scale(1);
+    } 
+  } */
