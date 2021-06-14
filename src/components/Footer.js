@@ -40,10 +40,10 @@ const Footer = (props) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<SiFiverr
+						{/* <SiFiverr
 							size={35}
 							className="cursor-pointer mx-1 md:mx-0 md:p-1"
-						/>
+						/> */}
 					</a>
 
 

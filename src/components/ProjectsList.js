@@ -43,6 +43,13 @@ export default function ProjectsList() {
             techStack:["Python", "Tespy", "panda", "PVLib"]
 		},
 		{
+			id: 9,
+			src: "/images/HP9.jpg",
+			link: "https://hamzaable.github.io/Continuous-Form/",
+            projectName:"Continuous Form",
+            techStack:["React","Javascript","Tailwind","HTML", "CSS"]
+		},
+		{
 			id: 5,
 			src: "/images/HP7.jpg",
 			link: "https://hamzaable.github.io/React-Login/",
