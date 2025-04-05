@@ -10,11 +10,11 @@ const Navbar = (props) => {
       >
         Home
       </Link>
-      {/* <Link
+      <Link
          to="timeline"  className=" py-1 px-2 rounded text-purple-100 outline-none  border border-purple-200 focus:outline-none mx-1 hover:bg-purple-500 font-medium md:text-mygray md:border-0 md:hover:bg-transparent md:hover:underline"
       >
         Timeline
-      </Link> */}
+      </Link>
     </nav>
   );
 };

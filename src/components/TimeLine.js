@@ -187,7 +187,7 @@ const TimeLine = () => {
           ? 'border-right: 8px solid rgba(74, 74, 74);'
           : 'border-left: 8px solid rgba(74, 74, 74);'
       }
-      
+
       `
       );
     const toolBoxContainer = toolBox

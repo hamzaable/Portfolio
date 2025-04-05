@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import Layout from "./Layout";
 
 const Home = (props) => {
-	
 	const [mobile, setmobile] = useState(false);
-
 
 	const mql = window.matchMedia("(min-width: 768px)");
 	const mobileView = mql.matches;
@@ -53,9 +51,7 @@ const Home = (props) => {
 					transition={{ delay: 1 + 0.5, duration: 0.5 }}
 				>
 					Hi, my name is{" "}
-					<span className="text-darkPurple">
-						Hamza Rehman Saleemi
-					</span>
+					<span className="text-darkPurple">Hamza Rehman Saleemi</span>
 				</motion.h1>
 
 				<motion.h1
@@ -64,8 +60,7 @@ const Home = (props) => {
 					animate={{ marginLeft: "0px", opacity: 1 }}
 					transition={{ delay: 1 + 0.75, duration: 0.5 }}
 				>
-					I build things for the{" "}
-					<span className="text-darkPurple">Web</span>
+					I build things for the <span className="text-darkPurple">Web</span>
 				</motion.h1>
 				<motion.p
 					className="text-sm text-justify text-mygray md:text-base lg:text-xl mb-4 "
@@ -77,10 +72,11 @@ const Home = (props) => {
 						ease: "easeIn",
 					}}
 				>
-					Passion for writing computer programs lead me from
-					Engineering to Web Development. I'm specialized in HTML/CSS,
-					JavaScript, ReactJS, Angular on the frontend, but I'm pretty
-					comfortable with SQL, MongoDB, NodeJs and PHP.
+					Passion for writing computer programs lead me from Engineering to Web
+					Development. I have Web development experience of 4+ years. My tech
+					stack includes JavaScript, React, Nextjs, Angular, Symfony, and SCSS.
+					I am Passionate about building high performance, user centric applications
+					and continuously learning.
 				</motion.p>
 			</div>
 			<div className="-ml-2 md:hidden">
